@@ -10,6 +10,9 @@ audioFile: str = "audio\\sampleAudio.mp3"
 videoFileClip: VideoFileClip = VideoFileClip(videoFile)
 audioFileClip: AudioFileClip = AudioFileClip(audioFile)
 
+# Cuts audio file to match length of video
+audioFileClip: AudioFileClip = audioFileClip.set_duration(videoFileClip.duration)
+
 # Creates the new clip and writes it to a new file
 newVideoFileClip = videoFileClip.set_audio(audioFileClip)
 newVideoFileClip.write_videofile("output_videos\\sampleOutputVideo.mp4")
