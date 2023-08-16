@@ -1,14 +1,21 @@
 # Importing packages required
-from moviepy.video.io.VideoFileClip import VideoFileClip
-from moviepy.audio.io.AudioFileClip import AudioFileClip
+# from moviepy.video.io.VideoFileClip import VideoFileClip
+# from moviepy.audio.io.AudioFileClip import AudioFileClip
+from moviepy.editor import VideoFileClip, AudioFileClip, CompositeAudioClip
 
 # The sample files used (For testing only)
-videoFile: str = "video\\sampleVideo.mp4"
+videoFile: str = "video\\sampleVideo3.mp4"
 audioFile: str = "audio\\sampleAudio.mp3"
+audioFile2: str = "audio\\sampleAudio2.mp3"
+outputFile: str = "output_videos\\sampleOutputVideo.mp4"
 
 # Creates clips for both audio and video
 videoFileClip: VideoFileClip = VideoFileClip(videoFile)
 audioFileClip: AudioFileClip = AudioFileClip(audioFile)
+audioFileClip2: AudioFileClip = AudioFileClip(audioFile2)
+
+
+final_audio = CompositeAudioClip([audioFileClip, audioFileClip2])
 
 # Cuts audio file to match length of video
 audioFileClip: AudioFileClip = audioFileClip.set_duration(videoFileClip.duration)
