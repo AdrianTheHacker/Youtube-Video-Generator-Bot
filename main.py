@@ -14,17 +14,15 @@ videoFileClip: VideoFileClip = VideoFileClip(videoFile)
 audioFileClip: AudioFileClip = AudioFileClip(audioFile)
 audioFileClip2: AudioFileClip = AudioFileClip(audioFile2)
 
-
 final_audio = CompositeAudioClip([audioFileClip, audioFileClip2])
-
-# Cuts audio file to match length of video
-audioFileClip: AudioFileClip = audioFileClip.set_duration(videoFileClip.duration)
+final_audio.set_duration(videoFileClip.duration)
 
 # Creates the new clip and writes it to a new file
-newVideoFileClip = videoFileClip.set_audio(audioFileClip)
+newVideoFileClip = videoFileClip.set_audio(final_audio)
 newVideoFileClip.write_videofile("output_videos\\sampleOutputVideo.mp4")
 
 # Closes all the files opened
 videoFileClip.close()
 audioFileClip.close()
 newVideoFileClip.close()
+final_audio.close()
