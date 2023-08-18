@@ -7,8 +7,23 @@ class TextToSpeechEngine:
     def __init__(self):
         self.engine = pyttsx3.init()
 
-    
-    def test_speak(self, message: str):
+    def formatTextFile(self, filePath: str):
+        ''' Formats text files to remove all instances of â€™ to replace with '.
+
+        Parameters:
+        :param filePath: The given text file's file path.
+        '''
+        with open(filePath, "r") as file:
+            text = file.read()
+        file.close()
+
+        text = text.replace("â€™", "'")
+
+        with open(filePath, "w") as file:
+            file.write(text)
+        file.close()
+
+    def testSpeak(self, message: str):
         ''' Converts text prompt into audio played out of speakers of your computer.
 
         Parameters:
@@ -26,7 +41,3 @@ class TextToSpeechEngine:
         '''
         self.engine.save_to_file(message, filePath)
         self.engine.runAndWait()
-
-# engine = pyttsx3.init()
-# engine.say("I will speak this text")
-# engine.runAndWait()
