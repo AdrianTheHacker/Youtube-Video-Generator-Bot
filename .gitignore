@@ -1,3 +1,8 @@
+# Self Added
+Output_audio/
+Output_Videos/
+Stock_Videos/
+
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]
