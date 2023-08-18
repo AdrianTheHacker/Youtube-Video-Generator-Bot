@@ -7,8 +7,8 @@ from moviepy.editor import VideoFileClip, AudioFileClip, CompositeAudioClip
 videoFile: str = "video\\sampleVideo3.mp4"
 audioFile: str = "audio\\sampleAudio.mp3"
 audioFile2: str = "audio\\sampleAudio2.mp3"
+outputFile: str = "output_videos\\sampleOutputVideo.mp4"
 
-# # Creates clips for both audio and video
 # Creates clips for both audio and video
 videoFileClip: VideoFileClip = VideoFileClip(videoFile)
 audioFileClip: AudioFileClip = AudioFileClip(audioFile)
