@@ -10,10 +10,12 @@ class StockFootageClipMaker:
     Parameters:
     :param videoFilePath: The path to the stock footage video.
     :param audioFilePath: The path to the audio file.
+    :param outputVideoPath: The path to location of the output video produced.
     '''
-    def __init__(self, videoFilePath: str, audioFilePath: str):
+    def __init__(self, videoFilePath: str, audioFilePath: str, outputVideoPath: str):
         self.videoFilePath = videoFilePath
         self.audioFilePath = audioFilePath
+        self.outputVideoPath = outputVideoPath
 
     def makeVideoClip(self):
         ''' Creates a movie clip that is equal length to the audio clip.
@@ -36,7 +38,7 @@ class StockFootageClipMaker:
         print(videoClip.duration)
 
         videoClip = videoClip.set_audio(audioClip)
-        videoClip.write_videofile("test.mp4")
+        videoClip.write_videofile(self.outputVideoPath)
 
         videoClip.close()
         audioClip.close()
