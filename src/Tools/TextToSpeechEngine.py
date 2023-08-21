@@ -32,7 +32,7 @@ class TextToSpeechEngine:
         self.engine.say(message)
         self.engine.runAndWait()
 
-    def writeMessageToAudioFile(self, message: str, filePath: str):
+    def writeTextFileToAudioFile(self, message: str, filePath: str):
         ''' Converts text prompt into audio file.
 
         Parameters:
