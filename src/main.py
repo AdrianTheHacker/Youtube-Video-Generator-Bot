@@ -18,6 +18,5 @@ def main():
     stockFootageClipMaker = StockFootageClipMaker("Media\\Stock_Videos\\Video1-MinecraftParkour.mp4", "Media\\Output_Audio\\Story1.mp3", "Media\\Output_videos\\test.mp4")
     stockFootageClipMaker.makeVideoClip()
 
-
 if __name__ == '__main__':
     main()

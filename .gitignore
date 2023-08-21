@@ -2,6 +2,7 @@
 Output_audio/
 Output_Videos/
 Stock_Videos/
+secrets/
 
 # Byte-compiled / optimized / DLL files
 __pycache__/
