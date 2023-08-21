@@ -1,5 +1,8 @@
-{"type": "post", "data": [
-        {"type": "post", "id": "14ubx0c", "subreddit": {
+{
+    "type": "post",
+    "data": [
+        {
+            "type": "post", "id": "14ubx0c", "subreddit": {
                 "id": "2u55i", "name": "horrorstories", "nsfw": false
             }, 
             "created_utc": 1688841747, 

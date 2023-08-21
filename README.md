@@ -12,7 +12,7 @@ Feature | Deadline | Completion Date
 Convert text into an mp3 using text-to-speech | August 19, 2023 | August 18, 2023
 Getting short segment of background video from stock footage | August 20, 2023 | August 18, 2023
 Combining mp3 file with video from stock footage | August 21, 2023 | August 18, 2023
-Getting stories or text from an API of some sort | August 22, 2023 | N/A [Delayed]
+Getting stories or text from an API of some sort | August 22, 2023 | August 21, 2023
 Uploading newly created video to youtube (Proof of concept 1.0) | August 26, 2023 | N/A
 Adding subtitles over top of video (Proof of concept 1.5) | August 30, 2023 | N/A
 
