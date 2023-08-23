@@ -14,15 +14,25 @@ def main():
         data = json.load(dataFile)
     dataFile.close()
 
-    for story in data["data"]:
-        if story["selftext"] == None: continue
-        if len(story["selftext"]) < 20: continue
+    for storyNumber, storyContent in enumerate(data["data"]):
+        if storyContent["selftext"] == None: continue
+        if len(storyContent["selftext"]) < 20: continue
 
-        title = story["title"]
-        text = story["selftext"]
+        title = storyContent["title"]
+        text = storyContent["selftext"]
 
         print(title)
         print(text)
+
+        outputAudioDirectory = "Media\\Output_Audio"
+        outputVideoDirectory = "Media\\Output_Videos"
+        stockVideosDirectory = "Media\\Stock_Videos"
+
+        textToSpeechEngine = TextToSpeechEngine()
+        textToSpeechEngine.writeTextFileToAudioFile(f"{title}\n\n{text}", f"{outputAudioDirectory}\\Story{storyNumber}.mp3")
+
+        stockFootageClipMaker = StockFootageClipMaker(f"{stockVideosDirectory}\\Video1-MinecraftParkour.mp4", f"{outputAudioDirectory}\\Story{storyNumber}.mp3", f"{outputVideoDirectory}\\Story{storyNumber}.mp3")
+        stockFootageClipMaker.
 
 
 
