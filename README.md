@@ -4,7 +4,7 @@ By Adrian Tarantino ([@AdrianTheHacker](https://github.com/AdrianTheHacker))
 
 Over the past year I've seen many different channels on youtube upload simple shorts form videos that involved telling a story (often using text-to-speech bots) paired with background footage (usually a video game like Minecraft or Rocket League). I figured I could build a program to fully automate this process and allow users to grow a channel completely autonomously.
 
-## Features
+## Core Features
 The table below indicates features of the project as well as both the projected time of completion and the actual time of completion.
 
 Feature | Deadline | Completion Date
@@ -15,8 +15,25 @@ Combining mp3 file with video from stock footage | August 21, 2023 | August 18, 
 Getting stories or text from an API of some sort | August 22, 2023 | August 21, 2023
 Making the videos and storing them in a output-video directory (Proof of concept 0.5) | August 24, 2023 | N/A
 Uploading newly created video to youtube (Proof of concept 1.0) | August 26, 2023 | N/A
-Adding subtitles over top of video (Proof of concept 1.5) | August 30, 2023 | N/A
+Adding subtitles over top of video (Fully Working) | August 30, 2023 | N/A
 
+## Extra Features
+The table below indicates features of the project as well as both the projected time of completion and the actual time of completion.
+
+Feature | Deadline | Completion Date
+--------|----------|----------------
+Creating project website with setup instructions, as well as information about the project| TBD | N/A
+Get clips from Twitch API or Kick API | TBD | N/A
+Add subtitles to each clip | TBD | N/A
+Upload clips to YouTube | TBD | N/A
+
+## Tools Used
+1. [Python](https://www.python.org/)
+    * This was the primary coding language the project was built in.
+2. [Pyttsx3](https://pypi.org/project/pyttsx3/)
+    * This was used for converting text from the Reddit posts into audio files.
+3. [MoviePy](https://zulko.github.io/moviepy/)
+    * This is a python library used for both editing videos, and audio.
 
 # Old Project Vision
 This is a program that combines audio to a video. The main goal of this project is to make a fully autonomous youtube bot to generate videos.
