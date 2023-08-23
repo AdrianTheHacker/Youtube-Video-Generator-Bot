@@ -1,13 +1,30 @@
-import pyttsx3
+from dotenv import dotenv_values
 
 import requests
 import json
+import os
 
 from Tools.StockFootageClipMaker import StockFootageClipMaker
 from Tools.TextToSpeechEngine import TextToSpeechEngine
 
 
 def main():
+    # url = "https://socialgrep.p.rapidapi.com/search/posts"
+
+    # querystring = {"query":"/r/horrorstories"}
+
+    # envValues: dict = dotenv_values("..\\secrets\\.env")
+    # rapidAPIKey = envValues["X-RapidAPI-Key"]
+    # rapidAPIHost = envValues["X-RapidAPI-Host"]
+
+    # headers = {
+	  #   "X-RapidAPI-Key": "Check .ENV",
+	  #   "X-RapidAPI-Host": "Check .ENV"
+    # }
+
+    # response = requests.get(url, headers=headers, params=querystring)
+    # data = response.json()
+
     file: str = ".\\test.json"
 
     with open(file, "r", encoding="utf8") as dataFile:
@@ -31,8 +48,12 @@ def main():
         textToSpeechEngine = TextToSpeechEngine()
         textToSpeechEngine.writeTextFileToAudioFile(f"{title}\n\n{text}", f"{outputAudioDirectory}\\Story{storyNumber}.mp3")
 
-        stockFootageClipMaker = StockFootageClipMaker(f"{stockVideosDirectory}\\Video1-MinecraftParkour.mp4", f"{outputAudioDirectory}\\Story{storyNumber}.mp3", f"{outputVideoDirectory}\\Story{storyNumber}.mp3")
-        stockFootageClipMaker.
+        stockFootageClipMaker = StockFootageClipMaker(f"{stockVideosDirectory}\\Video1-MinecraftParkour.mp4", 
+                                                      f"{outputAudioDirectory}\\Story{storyNumber}.mp3", 
+                                                      f"{outputVideoDirectory}\\Story{storyNumber}.mp4")
+        stockFootageClipMaker.makeVideoClip()
+
+        os.remove(f"{outputAudioDirectory}\\Story{storyNumber}.mp3")
 
 
 

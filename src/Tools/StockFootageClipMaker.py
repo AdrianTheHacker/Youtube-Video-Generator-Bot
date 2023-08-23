@@ -1,7 +1,7 @@
 from moviepy.editor import AudioFileClip
 from moviepy.editor import VideoFileClip
 
-from random import randint
+from random import randint, random
 
 
 class StockFootageClipMaker:
@@ -26,7 +26,8 @@ class StockFootageClipMaker:
 
         videoClipLength = audioClip.duration
 
-        videoClipStart = (randint(100, (videoClip.duration - videoClipLength) * 100)) * 0.01
+        # videoClipStart = (randint(100, (videoClip.duration - videoClipLength) * 100)) * 0.01
+        videoClipStart = ((random() * 10) * (videoClip.duration - videoClipLength)) / 10
         videoClipEnd = videoClipStart + videoClipLength
 
         print(audioClip.duration)
