@@ -22,7 +22,6 @@ The table below indicates features of the project as well as both the projected 
 Feature | Deadline | Completion Date
 --------|----------|----------------
 Making UI for using software | August 30 | N/A
-
 Creating project website with setup instructions, as well as information about the project| TBD | N/A
 Get clips from Twitch API or Kick API | TBD | N/A
 Add subtitles to each clip | TBD | N/A
