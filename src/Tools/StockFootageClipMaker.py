@@ -39,7 +39,12 @@ class StockFootageClipMaker:
         print(videoClip.duration)
 
         videoClip = videoClip.set_audio(audioClip)
-        videoClip.write_videofile(self.outputVideoPath)
+
+        try:
+            videoClip.write_videofile(self.outputVideoPath)
+        except OSError:
+            print(f"Error Creating Video")
+            print(f"Length: {videoClip.duration}")
 
         videoClip.close()
         audioClip.close()
